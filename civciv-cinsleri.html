@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Civciv Çeşitleri - YARKACI ŞERİ</title>
+  
+  <!-- Bootstrap CSS -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  />
+  
+  <!-- Font Awesome (ikonlar için) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2DhKNc8gLGbJ+4HFRrW89azXzTw7Z/sg81aYMQHAeQTMUwcl5PoC/jPuPVZ4Q+4Pg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <style>
+    :root {
+      --primary-color: #8AB892; /* Ana renk */
+      --black: #000000;
+      --white: #ffffff;
+      --gray: #f7f7f7;
+      --whatsapp-green: #25D366;
+    }
+
+    body {
+      background-color: var(--white);
+      color: var(--black);
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    /* Navbar (index.html ile aynı yapıya sahip) */
+    .navbar-custom {
+      background-color: var(--primary-color) !important;
+    }
+    .navbar-custom .nav-link,
+    .navbar-custom .navbar-brand {
+      color: var(--black) !important;
+    }
+    .navbar-custom .nav-link:hover,
+    .navbar-custom .navbar-brand:hover {
+      opacity: 0.7;
+      color: var(--black) !important;
+      transition: all 0.3s;
+    }
+
+    /* Banner */
+    .banner {
+      height: 60vh;
+      /* Arka plan resmini değiştirmek için URL güncelleyebilirsiniz. */
+      background: linear-gradient(
+          rgba(0, 0, 0, 0.3),
+          rgba(0, 0, 0, 0.3)
+        ),
+        url('https://www.kumeshane.com/wp-content/uploads/2018/05/000000000-848x566.png') no-repeat center center;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: var(--white);
+    }
+    .banner h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .banner p {
+      color: var(--white);
+      font-size: 1.2rem;
+    }
+
+    /* Civciv Çeşitleri Kartları */
+    .cinsler-section {
+      padding: 2rem 0;
+    }
+    .cins-card {
+      transition: transform 0.3s;
+    }
+    .cins-card:hover {
+      transform: translateY(-5px);
+    }
+    .cins-card img {
+  height: 300px;
+  width: 100%; /* Genişliği kapsamak için */
+  object-fit: contain; /* Görüntüyü sığdırır ve alanı doldurur */
+  background-color: #ffffff; /* Boşluklarda görüntü için arka plan rengi */
+}
+
+    .cins-card .card-title {
+      color: var(--primary-color);
+      font-weight: 600;
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .cins-card .btn {
+      display: block;
+      margin: 1rem auto 0;
+      background-color: var(--primary-color);
+      border: none;
+      transition: background-color 0.3s;
+    }
+    .cins-card .btn:hover {
+      background-color: var(--whatsapp-green);
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--primary-color);
+      color: var(--black);
+      text-align: center;
+      padding: 1.5rem 0;
+      position: relative;
+    }
+    footer a.footer-fb {
+      color: var(--black);
+      margin-left: 0.5rem;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+    footer a.footer-fb:hover {
+      color: var(--whatsapp-green);
+    }
+
+    /* Sabit (floating) ikonlar - WhatsApp ve Telefon (index.html ile aynı yapı) */
+    .floating-whatsapp,
+    .floating-phone {
+      position: fixed;
+      z-index: 999;
+      font-size: 1.5rem;
+      color: var(--white);
+      border-radius: 50%;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      width: 50px;
+      height: 50px;
+      transition: transform 0.3s;
+    }
+    .floating-whatsapp:hover,
+    .floating-phone:hover {
+      opacity: 0.8;
+      transform: scale(1.1);
+    }
+    .floating-phone {
+      bottom: 20px;
+      left: 20px;
+      background-image: url('https://e7.pngegg.com/pngimages/915/706/png-clipart-blue-call-icon-dialer-android-google-play-telephone-phone-blue-text-thumbnail.png');
+      background-color: transparent;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .floating-whatsapp {
+      bottom: 20px;
+      right: 20px;
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2xWkaUOzeQ0MM9QPLtYiI-QTZdro3W_w_EQ&s');
+      background-color: var(--white);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .floating-whatsapp::before,
+    .floating-phone::before {
+      content: "";
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      z-index: -1;
+      background: radial-gradient(var(--primary-color), transparent 90%);
+      animation: ring-pulse 1.5s infinite ease-out;
+    }
+    @keyframes ring-pulse {
+      0% {
+        transform: translate(-50%, -50%) scale(0.2);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 0;
+      }
+    }
+
+    /* Responsive düzenlemeler */
+    @media (max-width: 768px) {
+      .banner {
+        height: 40vh;
+      }
+      .banner h1 {
+        font-size: 2rem;
+      }
+      .banner p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR (index.html ile aynı yapı) -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <i class="fas fa-drumstick-bite me-2" style="color:#000;"></i> YARKACI ŞERİ
+      </a>
+      <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navbarSupportedContent" 
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link d-flex align-items-center" aria-current="page" href="index.html">
+              <i class="fas fa-home me-1"></i> Ana Sayfa
+            </a>
+          </li>
+          <!-- Menünüzdeki diğer öğeler (Ör: Tavuk, Hindi) -->
+          <li class="nav-item ms-lg-3">
+            <a class="nav-link d-flex align-items-center" href="hindiler.html">
+              <i class="fas fa-dove me-1"></i> Hindi Çeşitlerimiz
+            </a>
+          </li>
+          <li class="nav-item ms-lg-3">
+            <a class="nav-link d-flex align-items-center active" href="civciv-cinsleri.html">
+              <i class="fas fa-egg me-1"></i> Civciv Çeşitlerimiz
+            </a>
+          </li>
+          <li class="nav-item ms-lg-3">
+            <a class="nav-link d-flex align-items-center" href="tavuk-cinsleri.html">
+              <i class="fas fa-drumstick-bite me-1"></i> Tavuk Çeşitlerimiz
+            </a>
+          </li>
+          <!-- Hakkımızda ve İletişim index.html'e benzer şekilde olabilir -->
+          <li class="nav-item ms-lg-3">
+            <a class="nav-link d-flex align-items-center" href="index.html#hakkimizda">
+              <i class="fas fa-info-circle me-1"></i> Hakkımızda
+            </a>
+          </li>
+          <li class="nav-item ms-lg-3">
+            <a class="nav-link d-flex align-items-center" href="index.html#iletisim">
+              <i class="fas fa-envelope me-1"></i> İletişim
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- BANNER (Arka plan resmi eklendi) -->
+  <section class="banner mb-4">
+    <div>
+      <h1>Civciv Çeşitleri</h1>
+      <p>Yüksek kaliteli civciv çeşitlerimizle tanışın.</p>
+    </div>
+  </section>
+  
+  <!-- Civciv Çeşitleri Kartları -->
+  <section class="cinsler-section">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Civciv Cinsi 1 -->
+        <div class="col-md-4">
+          <div class="card cins-card">
+            <img src="https://via.placeholder.com/400x200.png?text=Civciv+1" class="card-img-top" alt="Civciv Cinsi 1">
+            <div class="card-body">
+              <h5 class="card-title">Civciv Cinsi 1</h5>
+              <p class="card-text">Kısa açıklama buraya gelebilir.</p>
+              <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#detayCivciv1" aria-expanded="false" aria-controls="detayCivciv1">
+                Daha Fazla Oku
+              </button>
+              <div class="collapse mt-3" id="detayCivciv1">
+                <div class="card card-body">
+                  <p><strong>Özellik 1:</strong> Detay 1</p>
+                  <p><strong>Özellik 2:</strong> Detay 2</p>
+                  <p><strong>Özellik 3:</strong> Detay 3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Civciv Cinsi 2 -->
+        <div class="col-md-4">
+          <div class="card cins-card">
+            <img src="https://via.placeholder.com/400x200.png?text=Civciv+2" class="card-img-top" alt="Civciv Cinsi 2">
+            <div class="card-body">
+              <h5 class="card-title">Civciv Cinsi 2</h5>
+              <p class="card-text">Kısa açıklama buraya gelebilir.</p>
+              <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#detayCivciv2" aria-expanded="false" aria-controls="detayCivciv2">
+                Daha Fazla Oku
+              </button>
+              <div class="collapse mt-3" id="detayCivciv2">
+                <div class="card card-body">
+                  <p><strong>Özellik 1:</strong> Detay 1</p>
+                  <p><strong>Özellik 2:</strong> Detay 2</p>
+                  <p><strong>Özellik 3:</strong> Detay 3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Civciv Cinsi 3 -->
+        <div class="col-md-4">
+          <div class="card cins-card">
+            <img src="https://via.placeholder.com/400x200.png?text=Civciv+3" class="card-img-top" alt="Civciv Cinsi 3">
+            <div class="card-body">
+              <h5 class="card-title">Civciv Cinsi 3</h5>
+              <p class="card-text">Kısa açıklama buraya gelebilir.</p>
+              <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#detayCivciv3" aria-expanded="false" aria-controls="detayCivciv3">
+                Daha Fazla Oku
+              </button>
+              <div class="collapse mt-3" id="detayCivciv3">
+                <div class="card card-body">
+                  <p><strong>Özellik 1:</strong> Detay 1</p>
+                  <p><strong>Özellik 2:</strong> Detay 2</p>
+                  <p><strong>Özellik 3:</strong> Detay 3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Civciv Cinsi 4 -->
+        <div class="col-md-4">
+          <div class="card cins-card">
+            <img src="https://via.placeholder.com/400x200.png?text=Civciv+4" class="card-img-top" alt="Civciv Cinsi 4">
+            <div class="card-body">
+              <h5 class="card-title">Civciv Cinsi 4</h5>
+              <p class="card-text">Kısa açıklama buraya gelebilir.</p>
+              <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#detayCivciv4" aria-expanded="false" aria-controls="detayCivciv4">
+                Daha Fazla Oku
+              </button>
+              <div class="collapse mt-3" id="detayCivciv4">
+                <div class="card card-body">
+                  <p><strong>Özellik 1:</strong> Detay 1</p>
+                  <p><strong>Özellik 2:</strong> Detay 2</p>
+                  <p><strong>Özellik 3:</strong> Detay 3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- row -->
+    </div> <!-- container -->
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      © 2024 Firma Adı - Tüm Hakları Saklıdır 
+      <a href="#" class="footer-fb" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </p>
+  </footer>
+
+  <!-- Sabit (floating) Telefon ikonu - Sol Altta (index.html ile aynı) -->
+  <a 
+    href="tel:+905551234567" 
+    class="floating-phone" 
+    title="Bizi Arayın"
+  >
+    <i class="fas fa-phone d-none"></i>
+  </a>
+
+  <!-- Sabit (floating) WhatsApp ikonu - Sağ Altta (index.html ile aynı) -->
+  <a 
+    href="https://wa.me/905551234567" 
+    class="floating-whatsapp" 
+    target="_blank" 
+    title="WhatsApp ile İletişime Geçin"
+  >
+    <i class="fab fa-whatsapp d-none"></i>
+  </a>
+
+  <!-- Bootstrap JS -->
+  <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+  </script>
+</body>
+</html>

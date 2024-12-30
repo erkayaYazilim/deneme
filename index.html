@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+
+  <!-- Viewport Ayarları (Mobil Uyum) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Sayfa Başlığı -->
+  <title>YARKACI ŞERİ - Türkiye'nin Her Köşesine Kaliteli Yarka ve Kanada Hindisi</title>
+
+  <!-- Meta Açıklaması (SEO) -->
+  <meta 
+    name="description" 
+    content="YARKACI ŞERİ olarak Türkiye'nin her bölgesine yüksek kaliteli yarka, tavuk, civciv ve Kanada hindi tedarik ediyoruz. Tarım Kooperatifleri güvencesiyle sertifikalı ve sağlıklı hayvanlarımızı kısa sürede adresinize teslim ediyoruz."
+  />
+
+  <!-- Anahtar Kelimeler (Keywords) -->
+  <meta 
+    name="keywords" 
+    content="yarka, tavuk, civciv, hindi, kanada hindisi, tarım kooperatifleri, sertifikalı hayvan, yarka seri, tavuk cinsleri, civciv cinsleri, hindi çeşitleri, hızlı teslimat"
+  />
+
+  <!-- Robots Etiketi: Sayfanın indexlenmesini ve linklerin takip edilmesini sağlar -->
+  <meta name="robots" content="index,follow" />
+
+  <!-- Canonical Link (Tekil URL) -->
+  <link rel="canonical" href="https://www.yarkaciseri.com/" />
+
+  <!-- Open Graph (Sosyal Medya Paylaşımları) -->
+  <meta property="og:title" content="YARKACI ŞERİ - Kaliteli Yarka ve Kanada Hindisi Hizmeti" />
+  <meta property="og:description" content="Tarım Kooperatifleri sözleşmeli, sertifikalı ve sağlıklı hayvanlar. Türkiye'nin her yerine hızlı teslimat." />
+  <meta property="og:image" content="https://afyonyarka.com/wp-content/uploads/2022/11/ATAKSYARKATAVUK.png" /> <!-- Örnek resim -->
+  <meta property="og:url" content="https://www.yarkaciseri.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="tr_TR" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="YARKACI ŞERİ - Kaliteli Yarka ve Kanada Hindisi Hizmeti" />
+  <meta name="twitter:description" content="Tarım Kooperatifleri sözleşmeli, sertifikalı ve sağlıklı hayvanlar. Türkiye'nin her yerine hızlı teslimat." />
+  <meta name="twitter:image" content="https://afyonyarka.com/wp-content/uploads/2022/11/ATAKSYARKATAVUK.png" />
+
+  <!-- Schema.org / JSON-LD (Yapılandırılmış Veri Örneği) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "YARKACI ŞERİ",
+    "image": "https://afyonyarka.com/wp-content/uploads/2022/11/ATAKSYARKATAVUK.png",
+    "@id": "https://www.yarkaciseri.com/",
+    "url": "https://www.yarkaciseri.com/",
+    "telephone": "+90 555 981 48 68",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Örnek Mah. Örnek Sok. No: 1",
+      "addressLocality": "Örnek Şehir",
+      "addressRegion": "TR",
+      "postalCode": "00000",
+      "addressCountry": "TR"
+    },
+    "priceRange": "$$",
+    "description": "Türkiye'nin her köşesine yüksek kaliteli yarka, tavuk, civciv ve Kanada hindisi hizmeti. Tarım Kooperatifleri güvencesiyle sertifikalı ve sağlıklı hayvanlarımızı hızlı teslimatla sunuyoruz.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.9637",
+      "longitude": "35.2433"
+    },
+    "openingHours": "Mo,Tu,We,Th,Fr 09:00-18:00",
+    "sameAs": [
+      "https://www.facebook.com/seriban.agirbas24", 
+      "https://www.instagram.com/yarkaciseri" 
+      /* Kendi sosyal medya linklerinizi ekleyin */
+    ]
+  }
+  </script>
+
+  <!-- Bootstrap CSS -->
+  <link 
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  />
+  
+  <!-- Font Awesome (ikonlar için) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2DhKNc8gLGbJ+4HFRrW89azXzTw7Z/sg81aYMQHAeQTMUwcl5PoC/jPuPVZ4Q+4Pg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <style>
+    /* ...Sitenin kendi CSS kuralları (Sizin paylaştığınız CSS) 
+       (aynen kopyaladım, sadece body arka planını #ffffff yaptım) 
+    */
+    :root {
+      --primary-color: #8AB892;
+      --black: #000;
+      --white: #fff;
+      --gray: #f7f7f7;
+      --whatsapp-green: #25D366; 
+      --hover-transition: 0.3s;
+    }
+    body {
+      background-color: #ffffff; /* Değişiklik */
+      color: var(--black);
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    /* Navbar */
+    .navbar-custom {
+      background-color: var(--primary-color) !important;
+    }
+    .navbar-custom .nav-link,
+    .navbar-custom .navbar-brand {
+      color: var(--black) !important; 
+    }
+    .navbar-custom .nav-link:hover,
+    .navbar-custom .navbar-brand:hover {
+      opacity: 0.7;
+      color: var(--black) !important;
+      transition: all var(--hover-transition);
+    }
+    /* Banner */
+    .banner {
+      height: 60vh;
+      background: linear-gradient(
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0.5)
+        ),
+        url('https://afyonyarka.com/wp-content/uploads/2022/11/ATAKSYARKATAVUK.png') no-repeat center center;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: var(--white);
+      position: relative;
+    }
+    .banner h1 {
+      font-size: 4rem;
+      margin-bottom: 0.5rem;
+      font-weight: 800;
+      color: var(--white);
+      transition: color var(--hover-transition);
+    }
+    .banner p.lead {
+      color: var(--white);
+      font-size: 1.4rem;
+      transition: color var(--hover-transition);
+    }
+    /* Sertifikasyon */
+    .certification {
+      padding: 2rem 0;
+      background-color: var(--white);
+      text-align: center;
+    }
+    .certification img {
+      max-width: 200px;
+      height: auto;
+      transition: transform var(--hover-transition);
+    }
+    .certification img:hover {
+      transform: scale(1.05);
+    }
+    .certification p {
+      color: var(--primary-color);
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+    /* Özellikler */
+    .features {
+      background-color: var(--gray);
+      padding: 2rem 0;
+    }
+    .feature-box {
+      text-align: center;
+      background-color: var(--white);
+      border: 2px solid var(--primary-color);
+      border-radius: 8px;
+      padding: 1.5rem;
+      transition: transform var(--hover-transition);
+      min-height: 300px;
+      position: relative;
+    }
+    .feature-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .feature-box img.feature-img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      transition: transform var(--hover-transition);
+    }
+    .feature-box:hover img.feature-img {
+      transform: scale(1.1);
+    }
+    .feature-box h3 {
+      color: var(--black);
+      margin-bottom: 1rem;
+      font-weight: 700;
+      transition: color var(--hover-transition);
+    }
+    .carousel-caption {
+      background-color: rgba(0,0,0,0.5);
+      border-radius: 5px;
+      padding: 1rem;
+    }
+    /* Ürünler */
+    .products {
+      padding: 2rem 0;
+    }
+    .products h2 {
+      color: var(--black);
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      text-align: center;
+    }
+    .product-card {
+      border: none;
+      transition: transform var(--hover-transition);
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .product-card img {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      object-fit: cover;
+      height: 200px;
+    }
+    .product-card .card-body {
+      border-top: none;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      transition: border var(--hover-transition);
+    }
+    .product-card .card-title {
+      color: var(--black);
+      font-weight: 600;
+    }
+    .product-card a.btn.btn-success {
+      background-color: var(--primary-color);
+      border: none;
+      transition: background-color var(--hover-transition);
+    }
+    .product-card a.btn.btn-success:hover {
+      background-color: var(--black);
+      color: var(--white);
+    }
+    /* Hakkımızda & İletişim */
+    .info-section {
+      padding: 2rem 0;
+      background: var(--gray);
+      position: relative;
+    }
+    .info-section h2 {
+      color: var(--black);
+      margin-bottom: 1rem;
+      font-weight: 700;
+      text-decoration: underline;
+      text-decoration-color: var(--primary-color);
+    }
+    .info-section .info-anim {
+      transition: transform var(--hover-transition);
+    }
+    .info-section .info-anim:hover {
+      transform: scale(1.02);
+    }
+    /* Footer */
+    footer {
+      background-color: var(--primary-color);
+      color: var(--black);
+      text-align: center;
+      padding: 1.5rem 0;
+      position: relative;
+      transition: background-color var(--hover-transition);
+    }
+    footer:hover {
+      background-color: var(--black);
+      color: var(--white);
+    }
+    footer a.footer-fb {
+      color: var(--black);
+      margin-left: 0.5rem;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: color var(--hover-transition);
+    }
+    footer a.footer-fb:hover {
+      color: var(--white);
+    }
+    /* Floating Icons */
+    .floating-whatsapp,
+    .floating-phone {
+      position: fixed;
+      z-index: 999;
+      font-size: 1.5rem;
+      color: var(--white);
+      border-radius: 50%;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      width: 50px;
+      height: 50px;
+      transition: transform var(--hover-transition);
+    }
+    .floating-whatsapp:hover,
+    .floating-phone:hover {
+      opacity: 0.8;
+      transform: scale(1.1);
+    }
+    .floating-phone {
+      bottom: 20px;
+      left: 20px;
+      background-image: url('https://e7.pngegg.com/pngimages/915/706/png-clipart-blue-call-icon-dialer-android-google-play-telephone-phone-blue-text-thumbnail.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: transparent;
+    }
+    .floating-whatsapp {
+      bottom: 20px;
+      right: 20px;
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2xWkaUOzeQ0MM9QPLtYiI-QTZdro3W_w_EQ&s');
+      background-color: var(--white);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .floating-whatsapp::before,
+    .floating-phone::before {
+      content: "";
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      z-index: -1;
+      background: radial-gradient(var(--primary-color), transparent 90%);
+      animation: ring-pulse 1.5s infinite ease-out;
+    }
+    @keyframes ring-pulse {
+      0% {
+        transform: translate(-50%, -50%) scale(0.2);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 0;
+      }
+    }
+    @media (max-width: 768px) {
+      .banner {
+        height: 40vh;
+      }
+      .banner h1 {
+        font-size: 2.5rem;
+      }
+      .banner p.lead {
+        color: var(--white);
+        font-size: 0.8rem;
+        transition: color var(--hover-transition);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <!-- Logo (Tavuk ikonu) + Firma İsmi -->
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+        <i class="fas fa-drumstick-bite me-2" style="color: #000;"></i>
+        YARKACI ŞERİ
+      </a>
+      <!-- Mobile toggle button -->
+      <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navbarSupportedContent" 
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon" style="color: #000;"></span>
+      </button>
+      
+      <!-- Menüler -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <!-- Ana Sayfa -->
+          <li class="nav-item">
+            <a class="nav-link d-flex align-items-center active" aria-current="page" href="index.html">
+              <i class="fas fa-home me-2" style="color:#000;"></i> Ana Sayfa
+            </a>
+          </li>
+
+          <!-- Hindi (hindiler.html) -->
+          <li class="nav-item ms-lg-3">
+            <a class="nav-link d-flex align-items-center" href="hindiler.html">
+              <i class="fas fa-dove me-2" style="color:#000;"></i> Hindi Çeşitlerimiz
+            </a>
+          </li>
+
+          <!-- Civciv -->
+          <li class="nav-item ms-lg-3">
+            <a class="nav-link d-flex align-items-center" href="civciv-cinsleri.html" >
+              <i class="fas fa-egg me-2" style="color:#000;" ></i> Civciv Çeşitlerimiz
+            </a>
+          </li>
+
+          <!-- Tavuk -->
+          <li class="nav-item ms-lg-3">
+            <a class="nav-link d-flex align-items-center" href="tavuk-cinsleri.html">
+              <i class="fas fa-drumstick-bite me-2" style="color:#000;"></i> Tavuk Çeşitlerimiz
+            </a>
+          </li>
+
+          <!-- Hakkımızda -->
+          <li class="nav-item ms-lg-3">
+            <a class="nav-link d-flex align-items-center" href="#hakkimizda">
+              <i class="fas fa-info-circle me-2" style="color:#000;"></i> Hakkımızda
+            </a>
+          </li>
+
+          <!-- İletişim -->
+          <li class="nav-item ms-lg-3">
+            <a class="nav-link d-flex align-items-center" href="#iletisim">
+              <i class="fas fa-envelope me-2" style="color:#000;"></i> İletişim
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BANNER (Firma İsmi + Slogan) -->
+  <section class="banner" id="banner">
+    <div>
+      <h1>YARKACI ŞERİ</h1>
+      <p class="lead"> Türkiye'nin Her Köşesine Kaliteli Yarka ve Kanada Hindisi Hizmeti!</p>
+    </div>
+  </section>
+
+  <!-- SERTİFİKASYON BÖLÜMÜ -->
+  <section class="certification text-center">
+    <div class="container">
+      <img 
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqKHxOXZIXR0Tg8tgOjbEXxJ5dSEi1dcMqYw&s" 
+        alt="Tarım Kooperatifleri Logo" 
+        class="mb-3"
+      />
+      <p>Türkiye Tarım Kooperatifleri sözleşmeli firmasıdır</p>
+    </div>
+  </section>
+  
+  <!-- SLIDER (CAROUSEL) -->
+  <div id="sliderExample" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button 
+        type="button" 
+        data-bs-target="#sliderExample" 
+        data-bs-slide-to="0" 
+        class="active" 
+        aria-current="true" 
+        aria-label="Slide 1"
+      ></button>
+      <button 
+        type="button" 
+        data-bs-target="#sliderExample" 
+        data-bs-slide-to="1" 
+        aria-label="Slide 2"
+      ></button>
+      <button 
+        type="button" 
+        data-bs-target="#sliderExample" 
+        data-bs-slide-to="2" 
+        aria-label="Slide 3"
+      ></button>
+    </div>
+    <div class="carousel-inner">
+      <!-- Slide 1 -->
+      <div class="carousel-item active" 
+           style="height:400px; background: url('https://animalsaveturkey.org/wp-content/uploads/Tavukculuk-2-768x510.webp') no-repeat center center; background-size:cover;">
+        <div class="carousel-caption">
+          <h5>Kaliteli Hizmet</h5>
+          <p>Sektörde yılların tecrübesiyle en kaliteli ürünleri sunuyoruz.</p>
+        </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="carousel-item" 
+           style="height:400px; background: url('https://www.karamantb.org.tr/yuklemeler/basari-hikayeleri-gorselleri/detail/konyalife42a.jpg') no-repeat center center; background-size:cover;">
+        <div class="carousel-caption">
+          <h5>Güvenilir Ürünler</h5>
+          <p>Tüm hayvanlarımız Tarım Kooperatifleri güvencesi altındadır.</p>
+        </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="carousel-item" 
+           style="height:400px; background: url('https://www.argeto.com.tr/Upload/Dosya/2023/6/7/musteri-memnuniyeti.webp') no-repeat center center; background-size:cover;">
+        <div class="carousel-caption">
+          <h5>Müşteri Memnuniyeti</h5>
+          <p>Her zaman önceliğimiz müşteri memnuniyetini sağlamaktır.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Önceki - Sonraki -->
+    <button 
+      class="carousel-control-prev" 
+      type="button" 
+      data-bs-target="#sliderExample" 
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Önceki</span>
+    </button>
+    <button 
+      class="carousel-control-next" 
+      type="button" 
+      data-bs-target="#sliderExample" 
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Sonraki</span>
+    </button>
+  </div>
+
+  <!-- KISA TANITIMLAR (Özellikler) -->
+  <section class="features">
+    <div class="container">
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4 col-sm-6">
+          <div class="feature-box">
+            <img src="https://media.istockphoto.com/id/1286062826/tr/vekt%C3%B6r/askerlik-sertifika-s%C4%B1fat%C4%B1-simgesi-%C3%BClke-kavram%C4%B1n%C4%B1n-vatanseverlik-korumas%C4%B1-mezuniyet-askerinin.jpg?s=612x612&w=0&k=20&c=azsFpKVu-3V3TNj64R5n66Fwo25hXYIptpPpaqwKpfc=" alt="Sertifika" class="feature-img" />
+            <h3>Resmi Sertifikalı</h3>
+            <p>Tarım Kooperatifleri ile yaptığımız anlaşmalar sayesinde tüm ürünlerimiz sertifikalı ve yasal.</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="feature-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUdPo9LDK2n7Hs2dARe0mbJ8x8DQcUTIWUXA&s" alt="Sağlık" class="feature-img" />
+            <h3>Sağlıklı ve Güvenli</h3>
+            <p>Gerekli aşıları ve bakımı düzenli yapılan hayvanlar, üstün kalite standartlarına sahip.</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="feature-box">
+            <img src="https://png.pngtree.com/png-vector/20191129/ourmid/pngtree-fast-delivery-icon-delivery-icon-png-image_2047531.jpg" alt="Teslimat" class="feature-img" />
+            <h3>Hızlı Teslimat</h3>
+            <p>Türkiye geneli yaygın lojistik ağımız sayesinde kısa sürede teslim imkânı.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ÜRÜNLER (3 tane: Hindi, Tavuk, Civciv) -->
+  <section id="urunler" class="products">
+    <div class="container">
+      <h2>Ürünlerimiz</h2>
+      <div class="row g-4">
+        <!-- Ürün: Hindi -->
+        <div class="col-md-4">
+          <div class="card product-card">
+            <img 
+              src="https://yetistir.net/wp-content/uploads/2021/04/Hibrid-Hindi-Irklari.jpg" 
+              class="card-img-top"
+              alt="Hindi Ürünü"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Hindi Çeşitlerimiz</h5>
+              <p class="card-text">Sağlıklı ve dayanıklı hindiler.</p>
+              <!-- Daha Fazlasını Gör -> hindiler.html -->
+              <a href="hindiler.html" class="btn btn-success">Daha Fazlasını Gör</a>
+            </div>
+          </div>
+        </div>
+        <!-- Ürün: Tavuk -->
+        <div class="col-md-4">
+          <div class="card product-card">
+            <img 
+              src="https://cdn.qukasoft.com/f/545937/cDhpVUpHVTArYkI4Tmk4Z0hzOXBiZlFKSWNEeFJBPT0/m/en-cok-yumurta-veren-tavuk-turleri-nelerdir--4915213-sw1200sh581.png" 
+              class="card-img-top"
+              alt="Tavuk Ürünü"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Tavuk Çeşitlerimiz </h5>
+              <p class="card-text">Yüksek verimli ve kaliteli tavuk cinsleri.</p>
+              <a href="tavuk-cinsleri.html" class="btn btn-success">Daha Fazlasını Gör</a>
+            </div>
+          </div>
+        </div>
+        <!-- Ürün: Civciv -->
+        <div class="col-md-4">
+          <div class="card product-card">
+            <img 
+              src="https://www.genctavukculuk.com/wp-content/uploads/2018/02/lohman-500x233.jpg" 
+              class="card-img-top"
+              alt="Civciv Ürünü"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Civciv Çeşitlerimiz </h5>
+              <p class="card-text">Dayanıklı ve özenle yetiştirilmiş civcivler.</p>
+              <a href="civciv-cinsleri.html" class="btn btn-success">Daha Fazlasını Gör</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HAKKIMIZDA (Ayrı bölüm) -->
+  <section id="hakkimizda" class="info-section">
+    <div class="container">
+      <div class="row g-4 info-anim">
+        <div class="col-12">
+          <h2 class="text-center">Hakkımızda</h2>
+          <p class="text-center">
+            Firmamız, hayvancılık sektöründe uzun yıllardır edindiği tecrübe ve bilgi birikimiyle müşterilerine
+            daima güvenilir, sağlıklı ve kaliteli hizmetler sunmaktadır. Tarım Kooperatifleriyle yaptığımız
+            anlaşmalar sayesinde Türkiye'nin her bölgesine hızlı ve güvenli teslimat gerçekleştirmekteyiz.
+            <br/><br/>
+            Profesyonel ekibimiz, hayvan bakım ve beslenme konularında uzmanlaşmış olup, her aşamada müşteri
+            memnuniyetini ön planda tutmaktadır.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- İLETİŞİM (Gelişmiş Tasarım) -->
+  <section id="iletisim" class="info-section">
+    <div class="container">
+      <div class="row g-4 info-anim">
+        <div class="col-md-6">
+          <h2 class="text-center">Neden Biz?</h2>
+          <ul class="list-group list-group-flush" style="border-radius:8px;">
+            <li class="list-group-item">
+              <i class="fas fa-check-circle me-2"></i>
+              Resmi kurumlarla işbirliği (Tarım Kooperatifleri anlaşmaları).
+            </li>
+            <li class="list-group-item">
+              <i class="fas fa-check-circle me-2"></i>
+              Uzman kadro ve kaliteli hizmet anlayışı.
+            </li>
+            <li class="list-group-item">
+              <i class="fas fa-check-circle me-2"></i>
+              Türkiye geneli hızlı teslimat imkânı.
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h2 class="text-center">İletişim</h2>
+          <div class="text-center">
+            <p class="mb-1"><strong>Telefon:</strong> +90 555 981 48 68</p>
+            <p class="mb-1"><strong>E-posta:</strong> sehribanagirbas24@gmail.com</p>
+            <p class="mt-3 mb-1"><strong>Sosyal Medya:</strong></p>
+            <a href="https://www.facebook.com/seriban.agirbas24" style="color: var(--primary-color);" class="me-3">
+              <i class="fab fa-facebook-f fa-lg"></i>
+            </a>
+            <a href="#" style="color: var(--primary-color);" class="me-3"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="#" style="color: var(--primary-color);"><i class="fab fa-instagram fa-lg"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="m-0">
+      © 2024 YARKACI SERİ - Tüm Hakları Saklıdır 
+      <a href="#" class="footer-fb" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    </p>
+  </footer>
+
+  <!-- FLOATING ICONS -->
+  <!-- Telefon (Sol Altta) -->
+  <a 
+    href="tel:+905559814868" 
+    class="floating-phone" 
+    title="Bizi Arayın"
+  >
+    <i class="fas fa-phone d-none"></i>
+  </a>
+  <!-- WhatsApp (Sağ Altta) -->
+  <a 
+    href="https://wa.me/905551234567" 
+    class="floating-whatsapp" 
+    target="_blank" 
+    title="WhatsApp ile İletişime Geçin"
+  >
+    <i class="fab fa-whatsapp d-none"></i>
+  </a>
+
+  <!-- Bootstrap JS -->
+  <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+  </script>
+</body>
+</html>

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hindiler - YARKACI ŞERİ</title>
+  
+  <!-- Bootstrap CSS -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  />
+  
+  <!-- Font Awesome (ikonlar için) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2DhKNc8gLGbJ+4HFRrW89azXzTw7Z/sg81aYMQHAeQTMUwcl5PoC/jPuPVZ4Q+4Pg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <style>
+    :root {
+      --primary-color: #8AB892; /* Ana renk */
+      --black: #000000;
+      --white: #ffffff;
+      --gray: #f7f7f7;
+      --whatsapp-green: #25D366; /* WhatsApp rengi */
+      --hover-transition: 0.3s; /* Hover animasyonu için */
+    }
+
+    body {
+      background-color: var(--white);
+      color: var(--black);
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    .navbar-custom {
+      background-color: var(--primary-color) !important;
+    }
+    .navbar-custom .nav-link,
+    .navbar-custom .navbar-brand {
+      color: var(--black) !important;
+    }
+    .navbar-custom .nav-link.active,
+    .navbar-custom .nav-link:hover,
+    .navbar-custom .navbar-brand:hover {
+      opacity: 0.7;
+      color: var(--black) !important;
+      transition: all var(--hover-transition);
+    }
+
+    /* Banner */
+    .banner {
+      height: 60vh;
+      background: linear-gradient(
+          rgba(0, 0, 0, 0.3),
+          rgba(0, 0, 0, 0.3)
+        ),
+        url('https://ayrancim.org.tr/wp-content/uploads/2022/04/HINDILER-W-1024x696.jpg') no-repeat center center;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: var(--white);
+    }
+    .banner h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      color: var(--white);
+      transition: color var(--hover-transition);
+    }
+    .banner p {
+      color: var(--white);
+      font-size: 1.2rem;
+      transition: color var(--hover-transition);
+    }
+
+    /* Header Bölümü */
+    .header-section {
+      padding: 4rem 0;
+      background-color: var(--gray);
+      text-align: center;
+    }
+    .header-section h1 {
+      color: var(--primary-color);
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .header-section p {
+      color: var(--black);
+      font-size: 1.2rem;
+    }
+
+    /* Hindiler Bölümü Kartları */
+    .cinsler-section {
+      padding: 2rem 0;
+    }
+    .cins-card {
+      transition: transform var(--hover-transition);
+    }
+    .cins-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .cins-card img {
+  height: 300px;
+  width: 100%; /* Genişliği kapsamak için */
+  object-fit: contain; /* Görüntüyü sığdırır ve alanı doldurur */
+  background-color: #ffffff; /* Boşluklarda görüntü için arka plan rengi */
+}
+    .cins-card .card-title {
+      color: var(--primary-color);
+      font-weight: 600;
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .cins-card .btn {
+      display: block;
+      margin: 1rem auto 0;
+      background-color: var(--primary-color);
+      border: none;
+      transition: background-color var(--hover-transition);
+    }
+    .cins-card .btn:hover {
+      background-color: var(--whatsapp-green);
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--primary-color);
+      color: var(--black);
+      text-align: center;
+      padding: 1.5rem 0;
+      position: relative;
+      transition: background-color var(--hover-transition);
+    }
+    footer:hover {
+      background-color: var(--black);
+      color: var(--white);
+    }
+    footer a.footer-fb {
+      color: var(--black);
+      margin-left: 0.5rem;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: color var(--hover-transition);
+    }
+    footer a.footer-fb:hover {
+      color: var(--whatsapp-green);
+    }
+
+    /* Sabit (floating) ikonlar - WhatsApp ve Telefon */
+    .floating-whatsapp,
+    .floating-phone {
+      position: fixed;
+      z-index: 999;
+      font-size: 1.5rem;
+      color: var(--white);
+      border-radius: 50%;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      width: 50px;
+      height: 50px;
+      transition: transform var(--hover-transition);
+    }
+    .floating-whatsapp:hover,
+    .floating-phone:hover {
+      opacity: 0.8;
+      transform: scale(1.1);
+    }
+    .floating-phone {
+      bottom: 20px;
+      left: 20px;
+      background-image: url('https://e7.pngegg.com/pngimages/915/706/png-clipart-blue-call-icon-dialer-android-google-play-telephone-phone-blue-text-thumbnail.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: transparent;
+    }
+    .floating-whatsapp {
+      bottom: 20px;
+      right: 20px;
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2xWkaUOzeQ0MM9QPLtYiI-QTZdro3W_w_EQ&s');
+      background-color: var(--white);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .floating-whatsapp::before,
+    .floating-phone::before {
+      content: "";
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      z-index: -1;
+      background: radial-gradient(var(--primary-color), transparent 90%);
+      animation: ring-pulse 1.5s infinite ease-out;
+    }
+    @keyframes ring-pulse {
+      0% {
+        transform: translate(-50%, -50%) scale(0.2);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 0;
+      }
+    }
+
+    /* Responsive düzenlemeler */
+    @media (max-width: 768px) {
+      .banner {
+        height: 40vh;
+      }
+      .banner h1 {
+        font-size: 2rem;
+      }
+      .banner p {
+        font-size: 1rem;
+      }
+    }
+
+    /* Dropdown Menü İçin Ek Stil */
+    .dropdown-menu a.dropdown-item {
+      color: var(--black);
+      transition: background-color var(--hover-transition);
+    }
+    .dropdown-menu a.dropdown-item:hover {
+      background-color: var(--gray);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+        <i class="fas fa-drumstick-bite me-2" style="color:#000;"></i> YARKACI ŞERİ
+      </a>
+      <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navbarSupportedContent" 
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link d-flex align-items-center" aria-current="page" href="index.html">
+              <i class="fas fa-home me-1"></i> Ana Sayfa
+            </a>
+          </li>
+          <!-- Çeşitlerimiz için Ayrı Menü Öğeleri -->
+          <li class="nav-item dropdown ms-lg-3">
+            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-cogs me-1"></i> Çeşitlerimiz
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="hindiler.html">Hindiler</a></li>
+              <li><a class="dropdown-item" href="tavuk-cinsleri.html">Tavuk Cinsleri</a></li>
+              <li><a class="dropdown-item" href="civciv-cinsleri.html">Civciv Çeşitleri</a></li>
+            </ul>
+          </li>
+          <li class="nav-item ms-lg-3">
+            <a class="nav-link d-flex align-items-center" href="index.html#hakkimizda">
+              <i class="fas fa-info-circle me-1"></i> Hakkımızda
+            </a>
+          </li>
+          <li class="nav-item ms-lg-3">
+            <a class="nav-link d-flex align-items-center" href="index.html#iletisim">
+              <i class="fas fa-envelope me-1"></i> İletişim
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Banner -->
+  <section class="banner mb-4">
+    <div>
+      <h1>Hindiler</h1>
+      <p>Yüksek kaliteli hindilerimizle tanışın.</p>
+    </div>
+  </section>
+  
+  <!-- Hindiler Bölümü Kartları -->
+  <section class="cinsler-section" id="hindiler">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Hindi Cinsi 1 -->
+        <div class="col-md-4">
+          <div class="card cins-card">
+            <img src="https://via.placeholder.com/400x200.png?text=Hindi+1" class="card-img-top" alt="Hindi Cinsi 1">
+            <div class="card-body">
+              <h5 class="card-title">Hindi Cinsi 1</h5>
+              <p class="card-text">Kısa açıklama buraya gelebilir.</p>
+              <a class="btn btn-success" data-bs-toggle="collapse" href="#detayHindi1" role="button" aria-expanded="false" aria-controls="detayHindi1">
+                Daha Fazla Oku
+              </a>
+              <div class="collapse mt-3" id="detayHindi1">
+                <div class="card card-body">
+                  <p><strong>Saflık:</strong> 1.KAN</p>
+                  <p><strong>Irk:</strong> Yumurtacı</p>
+                  <p><strong>Yem Tüketimi:</strong> 150 gr</p>
+                  <p><strong>Senelik Yumurta Verimi:</strong> 300 adet</p>
+                  <p><strong>Gaga:</strong> Uç Kesim</p>
+                  <p><strong>Gramaj:</strong> 2000 gr</p>
+                  <p><strong>Aşı:</strong> Tüm üretici aşıları yapılmış</p>
+                  <p><strong>Evrak:</strong> Aşı kartları ve sevk raporu</p>
+                  <p><strong>Cinsiyet:</strong> %100 Dişi</p>
+                  <p><strong>Yumurtaya Giriş:</strong> 3/4 Hafta</p>
+                  <p><strong>Nakliyesi:</strong> Özel Araç Teslim</p>
+                  <p><strong>Minimum Satış:</strong> 300 Adet</p>
+                  <p><em>Bu sayının altına kesinlikle satış yapılmamaktadır.</em></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Hindi Cinsi 2 -->
+        <div class="col-md-4">
+          <div class="card cins-card">
+            <img src="https://via.placeholder.com/400x200.png?text=Hindi+2" class="card-img-top" alt="Hindi Cinsi 2">
+            <div class="card-body">
+              <h5 class="card-title">Hindi Cinsi 2</h5>
+              <p class="card-text">Beyaz Yumurta Rengi, 16/18 Haftalık Yaş.</p>
+              <a class="btn btn-success" data-bs-toggle="collapse" href="#detayHindi2" role="button" aria-expanded="false" aria-controls="detayHindi2">
+                Daha Fazla Oku
+              </a>
+              <div class="collapse mt-3" id="detayHindi2">
+                <div class="card card-body">
+                  <p><strong>Saflık:</strong> 2.KAN</p>
+                  <p><strong>Irk:</strong> Etçi</p>
+                  <p><strong>Yem Tüketimi:</strong> 160 gr</p>
+                  <p><strong>Senelik Yumurta Verimi:</strong> 280 adet</p>
+                  <p><strong>Gaga:</strong> Kalın Kesim</p>
+                  <p><strong>Gramaj:</strong> 2100 gr</p>
+                  <p><strong>Aşı:</strong> Tüm üretici aşıları yapılmış</p>
+                  <p><strong>Evrak:</strong> Aşı kartları ve sevk raporu</p>
+                  <p><strong>Cinsiyet:</strong> %100 Dişi</p>
+                  <p><strong>Yumurtaya Giriş:</strong> 4 Hafta</p>
+                  <p><strong>Nakliyesi:</strong> Özel Araç Teslim</p>
+                  <p><strong>Minimum Satış:</strong> 400 Adet</p>
+                  <p><em>Bu sayının altına kesinlikle satış yapılmamaktadır.</em></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Hindi Cinsi 3 -->
+        <div class="col-md-4">
+          <div class="card cins-card">
+            <img src="https://via.placeholder.com/400x200.png?text=Hindi+3" class="card-img-top" alt="Hindi Cinsi 3">
+            <div class="card-body">
+              <h5 class="card-title">Hindi Cinsi 3</h5>
+              <p class="card-text">Açık Kahverengi Yumurta Rengi, 16/18 Haftalık Yaş.</p>
+              <a class="btn btn-success" data-bs-toggle="collapse" href="#detayHindi3" role="button" aria-expanded="false" aria-controls="detayHindi3">
+                Daha Fazla Oku
+              </a>
+              <div class="collapse mt-3" id="detayHindi3">
+                <div class="card card-body">
+                  <p><strong>Saflık:</strong> 3.KAN</p>
+                  <p><strong>Irk:</strong> Çiftçi</p>
+                  <p><strong>Yem Tüketimi:</strong> 170 gr</p>
+                  <p><strong>Senelik Yumurta Verimi:</strong> 320 adet</p>
+                  <p><strong>Gaga:</strong> İnce Kesim</p>
+                  <p><strong>Gramaj:</strong> 2200 gr</p>
+                  <p><strong>Aşı:</strong> Tüm üretici aşıları yapılmış</p>
+                  <p><strong>Evrak:</strong> Aşı kartları ve sevk raporu</p>
+                  <p><strong>Cinsiyet:</strong> %100 Dişi</p>
+                  <p><strong>Yumurtaya Giriş:</strong> 3 Hafta</p>
+                  <p><strong>Nakliyesi:</strong> Özel Araç Teslim</p>
+                  <p><strong>Minimum Satış:</strong> 350 Adet</p>
+                  <p><em>Bu sayının altına kesinlikle satış yapılmamaktadır.</em></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- row -->
+    </div> <!-- container -->
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      © 2024 YARKACI ŞERİ - Tüm Hakları Saklıdır 
+      <a href="https://www.facebook.com/seriban.agirbas24" class="footer-fb" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </p>
+  </footer>
+
+  <!-- Sabit (floating) Telefon ikonu - Sol Altta -->
+  <a 
+    href="tel:+905551234567" 
+    class="floating-phone" 
+    title="Bizi Arayın"
+  >
+    <!-- İkon zaten background image olarak görünüyor, bu yüzden içindeki <i> etiketini kaldırdık veya d-none yapabilirsiniz -->
+  </a>
+
+  <!-- Sabit (floating) WhatsApp ikonu - Sağ Altta -->
+  <a 
+    href="https://wa.me/905551234567" 
+    class="floating-whatsapp" 
+    target="_blank" 
+    title="WhatsApp ile İletişime Geçin"
+  >
+    <!-- İkon zaten background image olarak görünüyor, bu yüzden içindeki <i> etiketini kaldırdık veya d-none yapabilirsiniz -->
+  </a>
+
+  <!-- Bootstrap JS -->
+  <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+  </script>
+</body>
+</html>
