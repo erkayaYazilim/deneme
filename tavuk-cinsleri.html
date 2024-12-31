@@ -15,16 +15,17 @@
   
   <!-- Font Awesome (ikonlar için) -->
   <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-  integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2DhKNc8gLGbJ+4HFRrW89azXzTw7Z/sg81aYMQHAeQTMUwcl5PoC/jPuPVZ4Q+4Pg=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/>
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-/>
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2DhKNc8gLGbJ+4HFRrW89azXzTw7Z/sg81aYMQHAeQTMUwcl5PoC/jPuPVZ4Q+4Pg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <!-- En güncel sürüm (alternatif) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  />
 
   <style>
     :root {
@@ -89,22 +90,6 @@
       transition: color var(--hover-transition);
     }
 
-    /* Header Bölümü */
-    .header-section {
-      padding: 4rem 0;
-      background-color: var(--gray);
-      text-align: center;
-    }
-    .header-section h1 {
-      color: var(--primary-color);
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    .header-section p {
-      color: var(--black);
-      font-size: 1.2rem;
-    }
-
     /* Tavuk Cinsleri Kartları */
     .cinsler-section {
       padding: 2rem 0;
@@ -117,11 +102,11 @@
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
     .cins-card img {
-  height: 300px;
-  width: 100%; /* Genişliği kapsamak için */
-  object-fit: contain; /* Görüntüyü sığdırır ve alanı doldurur */
-  background-color: #ffffff; /* Boşluklarda görüntü için arka plan rengi */
-}
+      height: 300px;
+      width: 100%;
+      object-fit: contain; /* Görüntüyü sığdırır ve alanı doldurur */
+      background-color: #ffffff; /* Boşluklarda görüntü için arka plan rengi */
+    }
     .cins-card .card-title {
       color: var(--primary-color);
       font-weight: 600;
@@ -471,6 +456,99 @@
             </div>
           </div>
         </div>
+        <!-- Sussex Cinsi -->
+        <div class="col-md-4">
+          <div class="card cins-card" id="sussex">
+            <!-- Örnek resim URL (değiştirilebilir) -->
+            <img src="https://i0.wp.com/istanbulsustavuklari.com/wp-content/uploads/2021/10/sussex-1-2.jpg?fit=545%2C430&ssl=1" class="card-img-top" alt="Sussex">
+            <div class="card-body">
+              <h5 class="card-title">Sussex</h5>
+              <p class="card-text">Açık Kahverengi Yumurta Rengi, 16/18 Haftalık Yaş.</p>
+              <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#detaySussex" aria-expanded="false" aria-controls="detaySussex">
+                Daha Fazla Oku
+              </button>
+              <div class="collapse mt-3" id="detaySussex">
+                <div class="card card-body">
+                  <p><strong>Saflık:</strong> 1.KAN</p>
+                  <p><strong>Irk:</strong> Yumurtacı</p>
+                  <p><strong>Yem Tüketimi:</strong> 110/120 gr</p>
+                  <p><strong>Senelik Yumurta Verimi:</strong> 240/260 adet</p>
+                  <p><strong>Gaga:</strong> Uç Kesim Dağlama</p>
+                  <p><strong>Gramaj:</strong> 1200/1350 gr</p>
+                  <p><strong>Aşı:</strong> Tüm üretici aşıları yapılmış</p>
+                  <p><strong>Evrak:</strong> Aşı kartları ve sevk raporu</p>
+                  <p><strong>Cinsiyet:</strong> %100 Dişi</p>
+                  <p><strong>Yumurtaya Giriş:</strong> 2/4 Hafta</p>
+                  <p><strong>Nakliyesi:</strong> Özel Araç Teslim</p>
+                  <p><strong>Minimum Satış:</strong> 200 Adet</p>
+                  <p><em>Bu sayının altına kesinlikle satış yapılmamaktadır.</em></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Sasso Cinsi -->
+        <div class="col-md-4">
+          <div class="card cins-card" id="sasso">
+            <!-- Örnek resim URL (değiştirilebilir) -->
+            <img src="https://anadoluyarka.com.tr/site_document/sayfa_img/QP8H6ANW4_resim_7_2_2018_17_b.jpg" class="card-img-top" alt="Sasso">
+            <div class="card-body">
+              <h5 class="card-title">Sasso</h5>
+              <p class="card-text">Hem Etlik Hem Yumurtacı, 16/18 Haftalık Yaş.</p>
+              <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#detaySasso" aria-expanded="false" aria-controls="detaySasso">
+                Daha Fazla Oku
+              </button>
+              <div class="collapse mt-3" id="detaySasso">
+                <div class="card card-body">
+                  <p><strong>Saflık:</strong> 1.KAN</p>
+                  <p><strong>Irk:</strong> Hem Etlik Hem Yumurtacı</p>
+                  <p><strong>Yem Tüketimi:</strong> 120/130 gr</p>
+                  <p><strong>Senelik Yumurta Verimi:</strong> 220/240 adet</p>
+                  <p><strong>Gaga:</strong> Uç Kesim Dağlama</p>
+                  <p><strong>Gramaj:</strong> 1500/1700 gr (dişilerde)</p>
+                  <p><strong>Aşı:</strong> Tüm üretici aşıları yapılmış</p>
+                  <p><strong>Evrak:</strong> Aşı kartları ve sevk raporu</p>
+                  <p><strong>Cinsiyet:</strong> %100 Dişi</p>
+                  <p><strong>Yumurtaya Giriş:</strong> 3/4 Hafta</p>
+                  <p><strong>Nakliyesi:</strong> Özel Araç Teslim</p>
+                  <p><strong>Minimum Satış:</strong> 200 Adet</p>
+                  <p><em>Bu sayının altına kesinlikle satış yapılmamaktadır.</em></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Australorp Cinsi -->
+        <div class="col-md-4">
+          <div class="card cins-card" id="australorp">
+            <!-- Örnek resim URL (değiştirilebilir) -->
+            <img src="https://www.tavukciftligi.net/wp-content/uploads/2017/01/australorp.jpg" class="card-img-top" alt="Australorp">
+            <div class="card-body">
+              <h5 class="card-title">Australorp</h5>
+              <p class="card-text">Siyah Tüy Rengi, 16/18 Haftalık Yaş.</p>
+              <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#detayAustralorp" aria-expanded="false" aria-controls="detayAustralorp">
+                Daha Fazla Oku
+              </button>
+              <div class="collapse mt-3" id="detayAustralorp">
+                <div class="card card-body">
+                  <p><strong>Saflık:</strong> 1.KAN</p>
+                  <p><strong>Irk:</strong> Yumurtacı (Yüksek verimli)</p>
+                  <p><strong>Yem Tüketimi:</strong> 115/125 gr</p>
+                  <p><strong>Senelik Yumurta Verimi:</strong> 250/280 adet</p>
+                  <p><strong>Gaga:</strong> Uç Kesim Dağlama</p>
+                  <p><strong>Gramaj:</strong> 1400/1600 gr</p>
+                  <p><strong>Aşı:</strong> Tüm üretici aşıları yapılmış</p>
+                  <p><strong>Evrak:</strong> Aşı kartları ve sevk raporu</p>
+                  <p><strong>Cinsiyet:</strong> %100 Dişi</p>
+                  <p><strong>Yumurtaya Giriş:</strong> 2/4 Hafta</p>
+                  <p><strong>Nakliyesi:</strong> Özel Araç Teslim</p>
+                  <p><strong>Minimum Satış:</strong> 200 Adet</p>
+                  <p><em>Bu sayının altına kesinlikle satış yapılmamaktadır.</em></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div> <!-- row -->
     </div> <!-- container -->
   </section>
@@ -479,7 +557,6 @@
   <footer>
     <p>
       © 2025 YARKACI ŞERİ - Tüm Hakları Saklıdır 
-
     </p>
   </footer>
 
